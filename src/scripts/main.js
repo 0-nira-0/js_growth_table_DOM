@@ -11,13 +11,14 @@ const maxLimit = 10;
 
 container.addEventListener('click', (e) => {
   const ancher = e.target.closest('.button');
-  const clonedRow = tbody.rows[0].cloneNode(true);
 
   if (!ancher) {
     return;
   }
 
   if (ancher.classList.contains('append-row')) {
+    const clonedRow = tbody.rows[0].cloneNode(true);
+
     tbody.append(clonedRow);
   }
 
